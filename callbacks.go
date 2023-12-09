@@ -1,26 +1,6 @@
 package gorm
 
-import (
-	"context"
-	"errors"
-	"fmt"
-	"reflect"
-	"sort"
-	"time"
 
-	"gorm.io/gorm/schema"
-	"gorm.io/gorm/utils"
-)
-
-func initializeCallbacks(db *DB) *callbacks {
-	return &callbacks{
-		processors: map[string]*processor{
-			"create": {db: db},
-			"query":  {db: db},
-			"update": {db: db},
-			"delete": {db: db},
-			"row":    {db: db},
-			"raw":    {db: db},
 		},
 	}
 }
